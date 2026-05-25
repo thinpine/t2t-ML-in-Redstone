@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="-100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>enable-bit (1bit)</string>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>20</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>GATED-WEIGHT (8bits)</string>
+        </entry>
+      </elementAttributes>
+      <pos x="340" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>1,1,1,1,1,1,1,1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="180" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>WEIGHT</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="0" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>8</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>7,1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="420" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>12</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>sign-bit</string>
+        </entry>
+      </elementAttributes>
+      <pos x="380" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>8,1,1,1,1,1,1,1,1,1</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>17</string>
+        </entry>
+      </elementAttributes>
+      <pos x="500" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>14</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>sign extend 8-&gt;17 bits</string>
+        </entry>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Add</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>17bit RCA</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>17</int>
+        </entry>
+      </elementAttributes>
+      <pos x="600" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+      </elementAttributes>
+      <pos x="580" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Register</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>17bit accum. reg.</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>17</int>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Clock</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>glbl-loop-clk</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-20" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>glbl-inference-state</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-20" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>accum-class-score</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>17</int>
+        </entry>
+      </elementAttributes>
+      <pos x="940" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>30</int>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>34</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Single-Channel Inference Accumulator Engine (IAE)</string>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>78</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-320" y="-300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>14</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>This embedded circuit processes a single class score. It uses an 8-bit AND gate to pass or block incoming signed weights based on feature activity. A sign-extension unit expands valid 8-bit weights to 17 bits 
+to prevent math overflow. Finally, a 17-bit ripple-carry adder continuously sums these values into a clocked D-flip-flop register.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-320" y="-280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>flipSelPos</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>17</int>
+        </entry>
+      </elementAttributes>
+      <pos x="800" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>17</int>
+        </entry>
+      </elementAttributes>
+      <pos x="740" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>glbl-reset</string>
+        </entry>
+      </elementAttributes>
+      <pos x="0" y="-180"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="640" y="100"/>
+      <p2 x="620" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="660" y="120"/>
+      <p2 x="620" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="0"/>
+      <p2 x="180" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="0" y="0"/>
+      <p2 x="120" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="0"/>
+      <p2 x="500" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="700" y="0"/>
+      <p2 x="860" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="160"/>
+      <p2 x="620" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-100"/>
+      <p2 x="180" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="-100"/>
+      <p2 x="260" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="-100"/>
+      <p2 x="500" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="100"/>
+      <p2 x="500" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="-20" y="100"/>
+      <p2 x="420" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="100"/>
+      <p2 x="660" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="100"/>
+      <p2 x="820" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="820" y="100"/>
+      <p2 x="940" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-40"/>
+      <p2 x="180" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="-40"/>
+      <p2 x="500" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="-40"/>
+      <p2 x="600" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="840" y="-40"/>
+      <p2 x="860" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="40"/>
+      <p2 x="500" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="40"/>
+      <p2 x="700" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-140"/>
+      <p2 x="180" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="-140"/>
+      <p2 x="240" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="-80"/>
+      <p2 x="160" y="-80"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="-80"/>
+      <p2 x="420" y="-80"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-80"/>
+      <p2 x="180" y="-80"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="80"/>
+      <p2 x="500" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="80"/>
+      <p2 x="660" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-20"/>
+      <p2 x="180" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="-20"/>
+      <p2 x="500" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="-20"/>
+      <p2 x="600" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="740" y="-20"/>
+      <p2 x="800" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="0" y="-180"/>
+      <p2 x="820" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="20"/>
+      <p2 x="220" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="20"/>
+      <p2 x="500" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="20"/>
+      <p2 x="820" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-20" y="180"/>
+      <p2 x="620" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-120"/>
+      <p2 x="180" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="120"/>
+      <p2 x="500" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-60"/>
+      <p2 x="180" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-60"/>
+      <p2 x="260" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="-60"/>
+      <p2 x="480" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="-60"/>
+      <p2 x="600" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="660" y="-60"/>
+      <p2 x="800" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="60"/>
+      <p2 x="500" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-140"/>
+      <p2 x="160" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-80"/>
+      <p2 x="160" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-60"/>
+      <p2 x="160" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-40"/>
+      <p2 x="160" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-20"/>
+      <p2 x="160" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-120"/>
+      <p2 x="160" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="160" y="-100"/>
+      <p2 x="160" y="-80"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="-140"/>
+      <p2 x="240" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="-60"/>
+      <p2 x="480" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="100"/>
+      <p2 x="480" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="-20"/>
+      <p2 x="480" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="0"/>
+      <p2 x="480" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="20"/>
+      <p2 x="480" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="40"/>
+      <p2 x="480" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="60"/>
+      <p2 x="480" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="80"/>
+      <p2 x="480" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="-40"/>
+      <p2 x="480" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="40"/>
+      <p2 x="640" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="-100"/>
+      <p2 x="420" y="-80"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="100"/>
+      <p2 x="420" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="-100"/>
+      <p2 x="500" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="820" y="20"/>
+      <p2 x="820" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="820" y="-180"/>
+      <p2 x="820" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="0"/>
+      <p2 x="120" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-60"/>
+      <p2 x="220" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="-40"/>
+      <p2 x="540" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="860" y="-40"/>
+      <p2 x="860" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="700" y="0"/>
+      <p2 x="700" y="40"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>

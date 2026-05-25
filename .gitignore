@@ -1,0 +1,85 @@
+# ==========================================
+# macOS Specific Files
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.VolumeIcon.icns
+.com.apple.timemachine.donotbackup
+
+# ==========================================
+# Python & Jupyter/Colab
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter / Google Colab outputs and checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+
+# ==========================================
+# Digital Logic (.dig) & Digital Simulator
+# ==========================================
+# H-Neemann's "Digital" simulator creates temporary/backup files
+*.dig.bak
+*.dig.beautified
+
+# ==========================================
+# Verilog & HDL Simulation Tools
+# ==========================================
+# Icarus Verilog outputs
+*.out
+*.vvp
+
+# Verilator outputs
+obj_dir/
+
+# Xilinx Vivado / ISE temporary files and logs
+hd_visual/
+*.log
+*.jou
+*.str
+*.ini
+.Xil/
+_x/
+.gen/
+
+# Altera/Intel Quartus
+db/
+incremental_db/
+output_files/
+*.jdi
+*.sof
+*.pof
+*.rpt
+
+# General simulation waveforms
+*.vcd
+*.wdb
+
+
+
+# ==========================================
+# Editor & General OS
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
