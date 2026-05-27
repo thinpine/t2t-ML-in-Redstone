@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
   <version>2</version>
-  <attributes/>
+  <attributes>
+    <entry>
+      <string>backgroundColor</string>
+      <awt-color>
+        <red>255</red>
+        <green>102</green>
+        <blue>102</blue>
+        <alpha>255</alpha>
+      </awt-color>
+    </entry>
+    <entry>
+      <string>romContent</string>
+      <romList>
+        <roms/>
+      </romList>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>20</int>
+    </entry>
+  </attributes>
   <visualElements>
     <visualElement>
       <elementName>single-channel-IAE.dig</elementName>
@@ -68,7 +88,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>enable-bit (1bit)</string>
+          <string>enable-bit</string>
         </entry>
       </elementAttributes>
       <pos x="260" y="100"/>
@@ -203,12 +223,12 @@
           <int>30</int>
         </entry>
         <entry>
-          <string>Label</string>
-          <string>4-Channel Inference Accumulator Engine (IAE)</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>49</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>4-Channel Inference Accumulator Engine (IAE)</string>
         </entry>
         <entry>
           <string>RectWidth</string>

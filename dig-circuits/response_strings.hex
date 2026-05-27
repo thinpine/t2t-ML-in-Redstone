@@ -1,0 +1,36 @@
+v2.0 raw
+# 0x00 - "noted"
+0e 0f 14 05 04 1b 1b 1b 1b 1b 1b 1b 1b 3*0
+# 0x10 - "i see"
+09 1b 13 05 05 1b 1b 1b 1b 1b 1b 1b 1b 3*0
+# 0x20 - "understood"
+15 0e 04 05 12 13 14 0f 0f 04 1b 1b 1b 3*0
+# 0x30 - "boring" (NEW ALTERNATIVE)
+02 0f 12 09 0e 07 1b 1b 1b 1b 1b 1b 1b 3*0
+
+# 0x40 - "good question"
+07 0f 0f 04 1b 11 15 05 13 14 09 0f 0e 3*0
+# 0x50 - "let me think" (NEW REPLACEMENT FOR INTERESTING)
+0c 05 14 1b 0d 05 1b 14 08 09 0e 0b 1b 3*0
+# 0x60 - "tell me more"
+14 05 0c 0c 1b 0d 05 1b 0d 0f 12 05 1b 3*0
+# 0x70 - "why ask me" (NEW ALTERNATIVE)
+17 08 19 1b 01 13 0b 1b 0d 05 1b 1b 1b 3*0
+
+# 0x80 - "i will try"
+09 1b 17 09 0c 0c 1b 14 12 19 1b 1b 1b 3*0
+# 0x90 - "certainly"
+03 05 12 14 01 09 0e 0c 19 1b 1b 1b 1b 3*0
+# 0xA0 - "on it"
+0f 0e 1b 09 14 1b 1b 1b 1b 1b 1b 1b 1b 3*0
+# 0xB0 - "no way" (NEW ALTERNATIVE)
+0e 0f 1b 17 01 19 1b 1b 1b 1b 1b 1b 1b 3*0
+
+# 0xC0 - "agreed"
+01 07 12 05 05 04 1b 1b 1b 1b 1b 1b 1b 3*0
+# 0xD0 - "sounds good"
+13 0f 15 0e 04 13 1b 07 0f 0f 04 1b 1b 3*0
+# 0xE0 - "lets do it"
+0c 05 14 13 1b 04 0f 1b 09 14 1b 1b 1b 3*0
+# 0xF0 - "i refuse" (NEW ALTERNATIVE)
+09 1b 12 05 06 15 13 05 1b 1b 1b 1b 1b 3*0

@@ -132,7 +132,7 @@ endmodule
 module \4-channel-IAE  (
   input \glbl-loop-clk ,
   input \glbl-inference-state ,
-  input \enable-bit_(1bit) ,
+  input \enable-bit ,
   input [7:0] \WEIGHT-0 ,
   input [7:0] \WEIGHT-1 ,
   input [7:0] \WEIGHT-2 ,
@@ -145,7 +145,7 @@ module \4-channel-IAE  (
 );
   // IAE-0
   single_channel_IAE single_channel_IAE_i0 (
-    .\enable-bit_(1bit) ( \enable-bit_(1bit)  ),
+    .\enable-bit_(1bit) ( \enable-bit  ),
     .WEIGHT( \WEIGHT-0  ),
     .\glbl-loop-clk ( \glbl-loop-clk  ),
     .\glbl-inference-state ( \glbl-inference-state  ),
@@ -154,7 +154,7 @@ module \4-channel-IAE  (
   );
   // IAE-1
   single_channel_IAE single_channel_IAE_i1 (
-    .\enable-bit_(1bit) ( \enable-bit_(1bit)  ),
+    .\enable-bit_(1bit) ( \enable-bit  ),
     .WEIGHT( \WEIGHT-1  ),
     .\glbl-loop-clk ( \glbl-loop-clk  ),
     .\glbl-inference-state ( \glbl-inference-state  ),
@@ -163,7 +163,7 @@ module \4-channel-IAE  (
   );
   // IAE-2
   single_channel_IAE single_channel_IAE_i2 (
-    .\enable-bit_(1bit) ( \enable-bit_(1bit)  ),
+    .\enable-bit_(1bit) ( \enable-bit  ),
     .WEIGHT( \WEIGHT-2  ),
     .\glbl-loop-clk ( \glbl-loop-clk  ),
     .\glbl-inference-state ( \glbl-inference-state  ),
@@ -172,7 +172,7 @@ module \4-channel-IAE  (
   );
   // IAE-3
   single_channel_IAE single_channel_IAE_i3 (
-    .\enable-bit_(1bit) ( \enable-bit_(1bit)  ),
+    .\enable-bit_(1bit) ( \enable-bit  ),
     .WEIGHT( \WEIGHT-3  ),
     .\glbl-loop-clk ( \glbl-loop-clk  ),
     .\glbl-inference-state ( \glbl-inference-state  ),

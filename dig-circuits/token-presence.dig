@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes>
+    <entry>
+      <string>backgroundColor</string>
+      <awt-color>
+        <red>237</red>
+        <green>255</green>
+        <blue>162</blue>
+        <alpha>255</alpha>
+      </awt-color>
+    </entry>
+    <entry>
+      <string>romContent</string>
+      <romList>
+        <roms/>
+      </romList>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>18</int>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>demux-decoder-8to256.dig</elementName>
+      <elementAttributes/>
+      <pos x="-40" y="340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>sticky-reg-bank-64bit.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>bank0-63</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>sticky-reg-bank-64bit.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>bank64-127</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>sticky-reg-bank-64bit.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>bank-128-191</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>sticky-reg-bank-64bit.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>bank192-255</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>word-slot-addr</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>word-flush</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="540"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>punct-q</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="720"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>punct-excl</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="820"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>punct-long</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="920"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>master-sent-rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>punct-presence</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+      </elementAttributes>
+      <pos x="900" y="780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>1,1,1</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>3</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>word-presence-0-63</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="900" y="540"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>word-presence-64-127</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="900" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>word-presence-128-191</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="900" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>word-presence-192-255</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="900" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Had to be implemented at the 64 bit scale instead of the planned 256 due to 
+Digital allowing only up to 64 bit merger outputs.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-340" y="80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RS-ff-as.dig</elementName>
+      <elementAttributes/>
+      <pos x="80" y="700"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RS-ff-as.dig</elementName>
+      <elementAttributes/>
+      <pos x="80" y="800"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RS-ff-as.dig</elementName>
+      <elementAttributes/>
+      <pos x="80" y="900"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>51</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Feature Mapping Decoder &amp; Presence Latches</string>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>84</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-360" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>This component maps input tokens to sentence memory. An 8-bit word slot address 
+is continuously decoded into a one-hot representation, which is clocked into four 
+parallel 64-bit sticky registers using the word-flush signal. Dedicated unclocked RS 
+flip-flops capture structural punctuation flags instantly, maintaining a stable presence 
+vector for analysis.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="880"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="220" y="160"/>
+      <p2 x="460" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="320"/>
+      <p2 x="460" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="800"/>
+      <p2 x="260" y="800"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="800"/>
+      <p2 x="80" y="800"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="420"/>
+      <p2 x="460" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="780" y="420"/>
+      <p2 x="900" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="900"/>
+      <p2 x="220" y="900"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="900"/>
+      <p2 x="80" y="900"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="360"/>
+      <p2 x="240" y="360"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="520"/>
+      <p2 x="460" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="200"/>
+      <p2 x="460" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="300"/>
+      <p2 x="460" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="780" y="300"/>
+      <p2 x="900" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="780"/>
+      <p2 x="260" y="780"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="780"/>
+      <p2 x="900" y="780"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="400"/>
+      <p2 x="220" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="400"/>
+      <p2 x="460" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="560"/>
+      <p2 x="460" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="720"/>
+      <p2 x="80" y="720"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="340"/>
+      <p2 x="-40" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="340"/>
+      <p2 x="220" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="180"/>
+      <p2 x="460" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="780" y="180"/>
+      <p2 x="900" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="820"/>
+      <p2 x="260" y="820"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="820"/>
+      <p2 x="80" y="820"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="280"/>
+      <p2 x="460" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="600"/>
+      <p2 x="40" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="600"/>
+      <p2 x="420" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="440"/>
+      <p2 x="460" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="920"/>
+      <p2 x="80" y="920"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="380"/>
+      <p2 x="240" y="380"/>
+    </wire>
+    <wire>
+      <p1 x="780" y="540"/>
+      <p2 x="900" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="540"/>
+      <p2 x="440" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="540"/>
+      <p2 x="460" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="700"/>
+      <p2 x="220" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="700"/>
+      <p2 x="80" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="380"/>
+      <p2 x="240" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="280"/>
+      <p2 x="240" y="360"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="200"/>
+      <p2 x="420" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="560"/>
+      <p2 x="420" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="440"/>
+      <p2 x="420" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="320"/>
+      <p2 x="420" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="180"/>
+      <p2 x="440" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="420"/>
+      <p2 x="440" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="300"/>
+      <p2 x="440" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="600"/>
+      <p2 x="40" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="700"/>
+      <p2 x="40" y="800"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="800"/>
+      <p2 x="40" y="900"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="160"/>
+      <p2 x="220" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="400"/>
+      <p2 x="220" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="700"/>
+      <p2 x="220" y="780"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="820"/>
+      <p2 x="220" y="900"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
