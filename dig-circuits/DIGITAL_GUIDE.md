@@ -2,9 +2,17 @@
 
 Tool to use: [Digital by HNeemann](https://github.com/hneemann/digital)
 
+-----------------------------------------------------------------------------------------
+
 Simulation file (to test and play around with): [model-w-i-no-o.dig](model-w-i-no-o.dig)
 
+![The Simulation Circuit](../images/simulator-screen.png)
+
+-----------------------------------------------------------------------------------------
+
 ML Model file: [full-model.dig](full-model.dig)
+
+![The ML Model Circuit](../images/full-model.png)
 
 -----------------------------------------------------------------------------------------
 
@@ -159,7 +167,7 @@ We have the winning class (0 to 3), but we need to print a **conversational resp
 
 The weights are already loaded into their respective ROMs in the .dig circuit. But if you want to do it yourself:
 
-### For this purpose, we have a Python script: [weight_to_hex.py](/weight_to_hex.py)
+### For this purpose, we have a Python script: [weight_to_hex.py](../weight_to_hex.py)
 
 The script takes out 8-bit weights from the JSON that needs to be located in the same directory (hardcoded filename in-script), separates them to their 4 classes, then divides each 8-bit weight to two 4-bit parts (low and high, to imitate 4-bit barrels ), and writes these sequentially into its respective .hex file that Digital's ROM's will be loaded with. 
 
@@ -167,21 +175,21 @@ You start with this input file: [nb_weights_8bit.json](/nb_weights_8bit.json)
 
 You get these outputs:
 
--> [inform_low_hex.hex](/hex-files/inform_low_hex.hex)
+-> [inform_low_hex.hex](../hex-files/inform_low_hex.hex)
 
--> [inform_high_hex.hex](/hex-files/inform_high_hex.hex)
+-> [inform_high_hex.hex](../hex-files/inform_high_hex.hex)
 
--> [question_low_hex.hex](/hex-files/question_low_hex.hex)
+-> [question_low_hex.hex](../hex-files/question_low_hex.hex)
 
--> [question_high_hex.hex](/hex-files/question_high_hex.hex)
+-> [question_high_hex.hex](../hex-files/question_high_hex.hex)
 
--> [directive_low_hex.hex](/hex-files/directive_low_hex.hex)
+-> [directive_low_hex.hex](../hex-files/directive_low_hex.hex)
 
--> [directive_high_hex.hex](/hex-files/directive_high_hex.hex)
+-> [directive_high_hex.hex](../hex-files/directive_high_hex.hex)
 
--> [commissive_low_hex.hex](/hex-files/commissive_low_hex.hex)
+-> [commissive_low_hex.hex](../hex-files/commissive_low_hex.hex)
 
--> [commissive_low_hex.hex](/hex-files/commissive_high_hex.hex)
+-> [commissive_low_hex.hex](../hex-files/commissive_high_hex.hex)
 
 
 The hex files I generated can be found in the hex-files folder.
