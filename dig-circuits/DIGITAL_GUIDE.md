@@ -163,25 +163,25 @@ The weights are already loaded into their respective ROMs in the .dig circuit. B
 
 The script takes out 8-bit weights from the JSON that needs to be located in the same directory (hardcoded filename in-script), separates them to their 4 classes, then divides each 8-bit weight to two 4-bit parts (low and high, to imitate 4-bit barrels ), and writes these sequentially into its respective .hex file that Digital's ROM's will be loaded with. 
 
-You start with this input file: [nb_weights_8bit.json](nb_weights_8bit.json)
+You start with this input file: [nb_weights_8bit.json](/nb_weights_8bit.json)
 
 You get these outputs:
 
--> [inform_low_hex.hex](hex-files/inform_low_hex.hex)
+-> [inform_low_hex.hex](/hex-files/inform_low_hex.hex)
 
--> [inform_high_hex.hex](hex-files/inform_high_hex.hex)
+-> [inform_high_hex.hex](/hex-files/inform_high_hex.hex)
 
--> [question_low_hex.hex](hex-files/question_low_hex.hex)
+-> [question_low_hex.hex](/hex-files/question_low_hex.hex)
 
--> [question_high_hex.hex](hex-files/question_high_hex.hex)
+-> [question_high_hex.hex](/hex-files/question_high_hex.hex)
 
--> [directive_low_hex.hex](hex-files/directive_low_hex.hex)
+-> [directive_low_hex.hex](/hex-files/directive_low_hex.hex)
 
--> [directive_high_hex.hex](hex-files/directive_high_hex.hex)
+-> [directive_high_hex.hex](/hex-files/directive_high_hex.hex)
 
--> [commissive_low_hex.hex](hex-files/commissive_low_hex.hex)
+-> [commissive_low_hex.hex](/hex-files/commissive_low_hex.hex)
 
--> [commissive_low_hex.hex](hex-files/commissive_high_hex.hex)
+-> [commissive_low_hex.hex](/hex-files/commissive_high_hex.hex)
 
 
 The hex files I generated can be found in the hex-files folder.
