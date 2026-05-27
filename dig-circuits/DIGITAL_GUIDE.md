@@ -44,29 +44,50 @@ for our encoding).
 
 Honestly, **you shouldn't expect much.** As our model is a Naive Bayes classifier with 4 classes, there are normally only 4 outputs. But to compensate and give it a more 'live' feel, I added an output generation step that picks a pseudo-random response out of the hardcoded responses defined for the selected class. The possible responses are:
 
+
 Class 0 - Inform:
+
 -"noted"
+
 -"i see"
+
 -"understood"
+
 -"boring"
 
+
 Class 1 - Question:
+
 -"good question"
+
 -"let me think"
+
 -"tell me more"
+
 -"why ask me"
 
+
 Class 2 - Directive:
+
 -"i will try"
+
 -"certainly"
+
 -"on it"
+
 -"no way"
 
+
 Class 3 - Commissive:
+
 -"agreed"
+
 -"sounds good"
+
 -"lets do it"
+
 -"i refuse"
+
 
 I'd also like to remind you that the model is weak, like REALLY weak. It has an average precision of about 62%, and that is carried on the shoulders of the Question classifications thanks to the special handling of punctuations. So if you input 'WHY?', you should naturally expect a Question response. But if you input something else, things are more likely to go out of fashion. For example, I said 'IS NICE' (informative) to the guy, and they replied back with 'I WILL TRY'. Felt bad for 'em tbh.
 
@@ -143,15 +164,25 @@ The weights are already loaded into their respective ROMs in the .dig circuit. B
 The script takes out 8-bit weights from the JSON that needs to be located in the same directory (hardcoded filename in-script), separates them to their 4 classes, then divides each 8-bit weight to two 4-bit parts (low and high, to imitate 4-bit barrels ), and writes these sequentially into its respective .hex file that Digital's ROM's will be loaded with. 
 
 You start with this input file: [nb_weights_8bit.json](nb_weights_8bit.json)
+
 You get these outputs:
+
 -> [inform_low_hex.hex](hex-files/inform_low_hex.hex)
+
 -> [inform_high_hex.hex](hex-files/inform_high_hex.hex)
+
 -> [question_low_hex.hex](hex-files/question_low_hex.hex)
+
 -> [question_high_hex.hex](hex-files/question_high_hex.hex)
+
 -> [directive_low_hex.hex](hex-files/directive_low_hex.hex)
+
 -> [directive_high_hex.hex](hex-files/directive_high_hex.hex)
+
 -> [commissive_low_hex.hex](hex-files/commissive_low_hex.hex)
+
 -> [commissive_low_hex.hex](hex-files/commissive_high_hex.hex)
+
 
 The hex files I generated can be found in the hex-files folder.
 
